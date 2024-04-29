@@ -1,0 +1,253 @@
+@font-face {
+    font-family:poppins;
+    src: url(fonts/Roboto-Regular.ttf);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+:root{
+    --bgcolor: #edf2f8;
+    --darkcolor:#49556b;
+    --lightcolor:#606e89;
+}
+body{
+    font-family: poppins;
+    background-color: var(--bgcolor);
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    padding: unset;
+    height: 250px;
+    width: 650px;
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(179, 178, 178);
+   
+    position: absolute;
+}
+.wrapper:hover .image img{
+    transition: all 100ms ease-in-out;
+    scale: 1.08;
+}
+.image img{
+    height: 100%;
+    width: 100%;    
+}
+.image{
+    overflow: hidden;
+    height: 100%;
+    width: 30%;
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+    
+}
+.content h6:nth-child(1){
+    font-size: 1.07rem;
+    margin-bottom: 20px;
+}
+.content{
+    height: 100%;
+    width: 70%;
+    padding: 1rem;
+}
+.wrapper p{
+    font-size: 0.8rem;
+    color: var(--lightcolor);
+    margin-bottom: 40px;
+    &:hover{
+        color: black;
+    }
+}
+.info{
+    display: flex;
+     justify-content: space-between;
+}
+.info{
+    margin-top: 50px;
+}
+.info img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.author{
+    display: flex;
+    flex-direction: row;
+}
+#share{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #e7eaed;
+}
+#share img{
+  
+    margin: 8px;   
+}
+#share, .img:hover{
+    cursor: pointer;
+}
+#pops{
+    position: absolute;
+    border-radius: 5px;
+    transform: translate(273px,-60px);
+    z-index: 99;
+    height: 50px;
+    padding-left: 5px;
+    background-color: var(--darkcolor);
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+}
+#pops::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color:  var(--darkcolor);
+    position: absolute;
+    bottom: -10px;
+    transform: translate(5px,-10px);
+    rotate: 45deg;
+
+}
+
+#pops span{
+    padding-top: 15px;
+    letter-spacing: 0.5rem;
+    color: #96a6c7;
+    font-weight:600;
+}
+.icons{
+    height: 100%;
+    width:50%;
+    display:flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.icons img{
+    height: 20px;
+    width: 20px;
+    padding: 5px;
+}
+#pops .icons img:hover{
+    cursor: pointer;
+}
+.hidden{
+    transition: 50ms linear;
+    opacity: 0;
+    transform: translate(0);
+    visibility:hidden;
+   
+}
+.active{
+    visibility:visible;
+    opacity: 1;
+}
+@media  all and (max-width:700px) {
+    .wrapper{
+        overflow: hidden;
+        height: 400px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+    .image{
+        height: 50%;
+        width: 100%;
+    }
+    .info{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+    }
+    .content{
+        height: 55%;
+        width: 100%;
+        padding: unset;
+    }
+    #pops {
+        border-radius: 5px;
+        transform: translate(0px,0px);
+        z-index: 0;
+        height: 60px;
+        padding-left: 5px;
+        background-color: var(--darkcolor);
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+        #share{
+            z-index: 99;
+            margin-top: 8px;
+            height: 40px;
+            width: 40px;
+            
+        }
+        .wrapper p {
+            font-size: 0.8rem;
+            color: var(--lightcolor);
+            margin-bottom: 40px;
+            padding: 0px 25px;
+        }
+        
+.icons {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    margin-left: 5px;
+    justify-content:baseline;
+    padding-top: 10px;
+}
+.icons img {
+    height: 23px;
+    width: 24px;
+    padding: 6px;
+}
+.content h6:nth-child(1) {
+    font-size: 1.07rem;
+    margin-bottom: 20px;
+}
+.content h6:nth-child(1) {
+    font-size: 1.07rem;
+    margin-bottom: 20px;
+    padding: 6px 23px 0px 23px;
+}
+#pops span {
+    padding-top: 18px;
+    letter-spacing: 0.5rem;
+    margin-left: 5px;
+    color: #96a6c7;
+    font-weight: 600;
+}
+#share{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-top: 12px;
+    background-color: #e7eaed;
+}
+#share img {
+    margin: 4px;
+}
+    
+  
+  }
+
+
+
+
+
+
+
